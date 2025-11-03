@@ -2,8 +2,14 @@
 class CastamFraction
 {
 	public :
-		CastamFraction(int numerator, int denumerator);
+		CastamFraction(int numerator, int denomerator);
 		void show();
+
+		void setNumerator(int numerator);
+		void setDenumerator(int denumerator);
+		void setVelue(int numerator,int denumerator);
+		int getNumerator();
+		int getDenumerator();
 		
 
 		private:

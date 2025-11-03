@@ -3,13 +3,41 @@
 
 using namespace std;
 
-CastamFraction::CastamFraction(int numerator, int denominator) {
+CastamFraction::CastamFraction(int numerator, int denumenator) {
 
-	_numerator = numerator; 
-	_denumerator = denominator;
+	setVelue(numerator  , denumenator);
 	 
 } 
 void CastamFraction::show() {
 	cout << this->_numerator << "/" << _denumerator << endl;
+
+}
+void CastamFraction::setNumerator(int numerator) 
+{
+	if (numerator == 0) {
+		numerator = 1;
+		cout << "Numerator cannot be equal to zero!" << endl;
+	}
+	_numerator = numerator;
+}
+int CastamFraction::getNumerator() {
+	return _numerator;
+}
+void CastamFraction::setDenumerator(int denumerator) 
+{
+	if (denumerator == 0) {
+		denumerator = 1;
+		cout << "Denumerator cannot be equal to zero!" << endl;
+	}
+	_denumerator = denumerator;
+}
+int CastamFraction::getDenumerator() {
+	return _denumerator;
+}
+
+void CastamFraction::setVelue(int numerator, int denumerator) 
+{
+	setDenumerator(denumerator);
+	setNumerator(numerator);
 
 }
