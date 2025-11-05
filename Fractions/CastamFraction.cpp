@@ -2,7 +2,9 @@
 #include <iostream>
 
 using namespace std;
-
+CastamFraction::CastamFraction() {
+	setVelue(1, 1);
+}
 CastamFraction::CastamFraction(int numerator, int denumenator) {
 
 	setVelue(numerator  , denumenator);
@@ -39,5 +41,13 @@ void CastamFraction::setVelue(int numerator, int denumerator)
 {
 	setDenumerator(denumerator);
 	setNumerator(numerator);
+
+}
+
+CastamFraction operator*(CastamFraction left ,CastamFraction right) {
+	CastamFraction result;
+	result.setNumerator(left.getNumerator() * right.getNumerator());
+	result.setDenumerator(left.getDenumerator() * right.getDenumerator());
+	return result;
 
 }

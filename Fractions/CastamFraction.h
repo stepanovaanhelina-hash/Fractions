@@ -1,7 +1,9 @@
-#pragma once
+﻿#pragma once
 class CastamFraction
 {
+
 	public :
+		CastamFraction();
 		CastamFraction(int numerator, int denomerator);
 		void show();
 
@@ -15,5 +17,8 @@ class CastamFraction
 		private:
 			int _numerator = 1;
 			int _denumerator = 1;
+
 };
 
+/*глоболние функции*/
+CastamFraction operator*(CastamFraction a, CastamFraction b);
