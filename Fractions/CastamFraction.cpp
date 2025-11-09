@@ -51,3 +51,19 @@ CastamFraction operator*(CastamFraction left ,CastamFraction right) {
 	return result;
 
 }
+CastamFraction operator/(CastamFraction left, CastamFraction right)
+{
+	CastamFraction result;
+
+	if (right.getNumerator() == 0) {
+		std::cout << "Error: division by zero!" << std::endl;
+		return result; 
+	}
+
+	result.setValue(
+		left.getNumerator() * right.getDenumerator(),
+		left.getDenumerator() * right.getNumerator()
+	);
+
+	return result;
+}

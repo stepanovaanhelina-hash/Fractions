@@ -22,3 +22,4 @@ class CastamFraction
 
 /*глоболние функции*/
 CastamFraction operator*(CastamFraction a, CastamFraction b);
+CastamFraction operator/(CastamFraction a, CastamFraction b);
