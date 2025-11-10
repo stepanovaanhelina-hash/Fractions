@@ -22,6 +22,7 @@ void CastamFraction::setNumerator(int numerator)
 	}
 	_numerator = numerator;
 }
+
 int CastamFraction::getNumerator() {
 	return _numerator;
 }
@@ -56,14 +57,16 @@ CastamFraction operator/(CastamFraction left, CastamFraction right)
 	CastamFraction result;
 
 	if (right.getNumerator() == 0) {
-		std::cout << "Error: division by zero!" << std::endl;
+		cout << "Error: division by zero!" << endl;
 		return result; 
 	}
 
-	result.setValue(
-		left.getNumerator() * right.getDenumerator(),
+	result.setNumerator(
+		left.getNumerator() * right.getDenumerator()
+	);
+	result.setDenumerator(
 		left.getDenumerator() * right.getNumerator()
 	);
-
 	return result;
 }
+

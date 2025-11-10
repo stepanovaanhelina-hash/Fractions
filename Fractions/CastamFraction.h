@@ -15,6 +15,8 @@ class CastamFraction
 		
 
 		private:
+			
+
 			int _numerator = 1;
 			int _denumerator = 1;
 
