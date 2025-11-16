@@ -70,3 +70,27 @@ CastamFraction operator/(CastamFraction left, CastamFraction right)
 	return result;
 }
 
+//???????? ??????? ???????? ?????? ???????????
+int lowerdenumerator(int a, int b) 
+    { 
+	while (b != 0) 
+	{
+		int temp = b;
+		b = a % b;
+		a = temp;
+	}
+
+	 return a;
+   }
+int find_lcm (int a, int b) {
+	return (a * b) / lowerdenumerator(a, b);
+	}
+CastamFraction operator+(CastamFraction left, CastamFraction right) {
+	CastamFraction result;
+	result.setNumerator(left.getNumerator() + right.getNumerator());
+
+	int lcm = find_lcm(left.getDenumerator(), right.getDenumerator());
+
+	result.setDenumerator(lcm);
+	return result;
+}
